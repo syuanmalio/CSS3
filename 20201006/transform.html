@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: cornflowerblue;
+            transition: .5s;
+            margin: 10px;
+            float: left;
+        }
+        .translatex:hover {
+            transform: translatex(20px);
+        }
+        .translatey:hover {
+            transform: translatey(20px);
+        }
+        .translate:hover {
+            transform: translate(20px,20px);
+        }
+        .rotate:hover {
+            transform: rotate(720deg);
+        }
+        .rotate2 {
+            transform-origin: center top;
+        }
+        .rotate2:hover {
+            transform: rotate(-60deg);
+        }
+        .scale:hover {
+            transform: scale(0);
+        }
+        .skewx:hover {
+            transform: skewX(-20deg);
+        }
+        .box-wrap {
+            width: 200px;
+            height: 200px;
+            border:2px solid peachpuff;
+            margin: 10px;
+            float: left;
+        }
+        .box-wrap .box {
+            margin: 0;
+        }
+        .scale2 {
+            transform:scale(0);
+            opacity:0;
+        }
+        .box-wrap:hover .scale2{
+            transform:scale(1);
+            opacity:1;
+        }
+        .translate2 {
+            transform:translatey(-200px);
+            opacity: 0;
+        }
+        .box-wrap:hover .translate2 {
+            transform: translatey(0px);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box translatex">translate x</div>
+    <div class="box translatey">translate y</div>
+    <div class="box translate">translate</div>
+    <div class="box rotate">rotate</div>
+    <div class="box rotate2">rotate2</div>
+    <div class="box scale">scale</div>
+    <div class="box skewx">skewx</div>
+    <div class="box-wrap">
+        <div class="box scale2"></div> 
+    </div>
+    <div class="box-wrap">
+        <div class="box translate2"></div>
+    </div>
+    
+</body>
+</html>

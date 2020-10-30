@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>boder Image</title>
+     <style>
+         .box {
+             width: 200px;
+             height: 200px;
+             /* background: #eeeeee; */
+             border: 20px solid transparent;
+             
+         }
+         .repeat{
+            border-image: url(images/border-image.png) 20 repeat;
+         }
+         .round{
+            border-image: url(images/border-image.png) 20 round;
+         }
+         .stretch{
+            border-image: url(images/border-image.png) 20 stretch;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="box repeat"></div>
+     <div class="box round"></div>
+     <div class="box stretch"></div>
+ </body>
+ </html>

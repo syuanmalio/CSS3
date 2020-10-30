@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry</title>
+    <style>
+        .wrapper{
+            max-width: 800px;
+            margin: 0 auto;
+            column-count:3;
+        }
+        .card{
+            background: #fff;
+            border-radius: 4px;
+            
+            -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+            page-break-inside: avoid; /* Firefox */
+            break-inside: avoid; /* IE 10+ */
+
+        }
+        img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <img src="images/pic1.jpg" alt="">
+            <h3>我是一隻貓</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic2.jpg" alt="">
+            <h3>十分瀑布</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic3.jpg" alt="">
+            <h3>早晨</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic4.jpg" alt="">
+            <h3>與狗擊掌</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic1.jpg" alt="">
+            <h3>我是一隻貓</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic2.jpg" alt="">
+            <h3>十分瀑布</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic3.jpg" alt="">
+            <h3>早晨</h3>
+        </div>
+        <div class="card">
+            <img src="images/pic4.jpg" alt="">
+            <h3>與狗擊掌</h3>
+        </div>
+    </div>
+</body>
+</html>

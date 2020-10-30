@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #eee;
+            font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+        }
+        nav{
+            background: #fff;
+        }
+        .container{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .btn{
+            background: #a94f62;
+            color:#fff;
+            padding: 6px 12px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover{
+            background: #773644;
+        }
+        .show_mobile{
+            display: none !important;
+        }
+        @media screen and (max-width: 768px){
+            .show_desktop{
+                display: none !important;
+            }
+            .show_mobile{
+                display: block !important;
+            }
+        }
+        .text-center{
+            text-align: center;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .d-inline-block{
+            display: inline-block;
+        }
+        .page_block{
+            padding: 20px 0;
+        }
+        .gray_bg{
+            background: #ccc;
+        }
+        .cover_fit{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+        .logo{
+            height: 48px;
+        }
+        
+        nav .container{
+            justify-content: space-between;
+
+        }
+        nav ul, nav ul li{
+            margin:0 0 0 10px;
+            padding:0;
+        }
+        nav ul li{
+            list-style: none;
+        }
+        nav ul li a{
+            height: 56px;
+            vertical-align: middle;
+            padding:4px 10px;
+            text-decoration: none;
+            color:#333;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li a:hover{
+            background: #eee;
+        }
+        
+        .banner{
+            padding:80px 0 0 0;
+            /* min-height: 80vh; */
+            background: url(images/long-hair.jpg);
+            background-size: cover;
+            color:#fff;
+            position:relative;
+        }
+        .banner_mask{
+            position: absolute;
+            background: rgba(0,0,0,.4);
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+        }
+        .banner h2{
+            font-size: 48px;
+            padding:0;
+            margin:0;
+        }
+        .banner .container, .banner .slogan{
+            position: relative;
+            z-index: 2;
+        }
+        .main_logo{
+            height:200px;
+        }
+        .search_area{
+            width:80%;
+            border: 2px solid #a94f62;
+            margin:0 auto;
+            padding:2px;
+        }
+        .search_area .input_wrap{
+            padding-left:10px;
+            flex-grow: 1;
+            position: relative;
+            height: 34px;
+        }
+        .search_area .input_wrap::before{
+            content: "";
+            width: 2px;
+            background: #a94f62;
+            height: 100%;
+            position: absolute;
+        }
+        /* .input_wrap_border{
+            content: "";
+            width: 2px;
+            background: #a94f62;
+            height: 100%;
+            position: absolute;
+        } */
+        .search_area input[type="text"]{
+            background: none;
+            border:none;
+            height: 100%;
+            width: 100%;
+            padding: 0 10px;
+
+        }
+        .search_area>div, .search_area .btn{
+            align-items: center;
+        }
+        .search_area>div{
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .search_area img, .search_area .fas{
+            padding: 0 4px;
+        }
+        @media screen and (max-width: 768px){
+            .search_area{
+                position: relative;
+                margin-bottom:50px;
+            }
+            .search_area .btn{
+                position: absolute;
+                bottom: -38px;
+                left:-2px;
+                width: calc( 100% + 4px );
+                justify-content: center;
+            }
+        }
+        .slogan{
+            margin-top: 40px;
+            padding:30px 0;
+            background: rgba(0,0,0,.8);
+        }
+        .slogan .wrapper{
+            max-width: 640px;
+            margin:0 auto;
+            justify-content: space-around;
+        }
+        .slogan img{
+            height: 100px;;
+        }
+        @media screen and (max-width: 768px){
+            .slogan .wrapper{
+                flex-wrap: wrap;
+            }
+            .slogan .wrapper>div{
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+        .page_block h2{
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .page_block h2::after{
+            position: absolute;
+            content: "";
+            height: 4px;
+            width: 40px; 
+            background: #333;
+            bottom:-16px;
+            left:50%;
+            /* margin: 0 0 0 -20px; */
+            transform: translateX(-50%);
+        }
+        .topic_list, .topic_list li{
+            padding:0;
+            margin:0;
+        }
+        .topic_list li{
+            width: 25%;
+            list-style: none;;
+        }
+        .topic_list li figure{
+            /* overflow: hidden; */
+            height: 280px;
+            padding:0;
+            margin:0 10px 10px;
+            position: relative;
+        }
+        .topic_list li span{
+            position: absolute;
+            display: block;
+            bottom:10px;
+            right:-10px;
+            background: rgba(255,255,255,.8);
+            padding: 4px 10px;
+            color:#a94f62;
+            border:1px solid #a94f62;
+            transition: .5s;
+
+        }
+        .topic_list li:hover span{
+            background: #a94f62;
+            color:#fff;
+        }
+        @media screen and (max-width: 768px){
+            .topic_list{
+                flex-wrap: wrap;
+            }
+            .topic_list li{
+                width: 50%;
+            }
+            .topic_list li figure{
+                height: 70vw;
+            }
+        }
+        .mobile_intro>div{
+            width: 50%;
+        }
+        .raise{
+            padding: 20px 0;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            min-height: 200px;
+            color:#fff;
+        }
+        .raise::after{
+            position: absolute;
+            content:"";
+            left:-10px;
+            top:-10px;
+            width: calc( 100% + 20px);
+            height:  calc( 100% + 20px);
+            background: url("images/long-hair.jpg");
+            background-size:cover;
+            opacity: .5;
+            filter: blur(10px);
+            /* transform: scale(1.2); */
+        }
+        .raise .d-flex{
+            position: relative;
+            z-index: 2;
+            max-width: 480px;
+            margin:0 auto;
+        }
+        .raise .d-flex>div{
+            width: 50%;
+        }
+        .raise .d-flex>div:nth-child(1){
+            position: relative;
+        }
+        .raise .d-flex>div:nth-child(1)::after{
+            position: absolute;
+            content: "";
+            top:24px;
+            bottom:0;
+            right:0;
+            border-right: 1px dashed #eee;
+        }
+        .big_number{
+            padding: 10px 0;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container d-flex">
+            <div class="d-flex">
+                <a href="/" class=""><img class="logo" src="images/logo.png" alt=""></a>
+                <ul class="d-flex show_desktop">
+                    <li><a href="">找髮型</a></li>
+                    <li><a href="">找設計師</a></li>
+                    <li><a href="">美髮誌</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="d-flex">
+                    <li class="show_desktop"><a href="">註冊</a></li>
+                    <li class="show_desktop"><a href="">登入</a></li>
+                    <li class="show_desktop"><a href=""><img src="images/setting.png" alt=""></a></li>
+                    <li class="show_mobile"><a href=""><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="banner">
+            <div class="banner_mask"></div>
+        <section class="container">
+            <section class="text-center">
+                <img class="main_logo" src="images/logo_icon_g.svg" alt="">
+                <h2>煩惱髮型嗎</h2>
+                <h3>給你最多髮型靈感及在地設計師</h3>
+            </section>
+            <section class="search_area d-flex">
+                <div class="d-flex">
+                    <img src="images/icon_searchbar_location.png" alt=""> 找地區 <i class="fas fa-sort-down"></i>
+                </div>
+                <div class="input_wrap">
+                    <div class="input_wrap_border"></div>
+                    <input type="text" placeholder="搜尋髮型主題">
+                </div>
+                <a class="btn d-flex">
+                    <img src="images/icon_searchbar_search.png" alt=""> 去逛逛
+                </a>
+            </section>
+            
+        </section>
+        <section class="slogan text-center">
+                <section class="wrapper d-flex">
+                        <div>
+                            <img src="images/icon_search.svg" alt="">
+                            <div>在地設計師作品<br>輕鬆找</div>
+                        </div>
+                        <div>
+                                <img src="images/icon_fashion.svg" alt="">
+                                <div>流行髮型<br>一手掌握</div>
+                            </div>
+                            <div>
+                                    <img src="images/icon_book.svg" alt="">
+                                    <div>即時溝通預約</div>
+                                </div>
+                    </section>
+
+        </section>
+        
+    </section>
+    <section class="page_block">
+        <h2 class="text-center">熱門主題</h2>
+        <div class="container">
+        <ul class="topic_list d-flex">
+            <li>
+                <a href="">
+                <figure>
+                    <img class="cover_fit" src="images/14366_18.jpg" alt="">
+                    <span href="">短髮</span>
+                </figure>
+                </a>
+            </li>
+            <li>
+                    <a href="">
+                    <figure>
+                        <img class="cover_fit" src="images/14366_18.jpg" alt="">
+                        <span href="">短髮</span>
+                    </figure>
+                    </a>
+                </li>
+                <li>
+                        <a href="">
+                        <figure>
+                            <img class="cover_fit" src="images/14366_18.jpg" alt="">
+                            <span href="">短髮</span>
+                        </figure>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="">
+                            <figure>
+                                <img class="cover_fit" src="images/14366_18.jpg" alt="">
+                                <span href="">短髮</span>
+                            </figure>
+                            </a>
+                        </li>
+        </ul>
+    </div>
+        <div class="text-right">
+            <a href="" class="btn">more</a>
+        </div>
+    </section>
+    <div class="page_block gray_bg" style="padding-bottom:0">
+        <div class="container d-flex mobile_intro">
+            <div class="text-right">
+                <img style="height: 240px" src="images/phones.png" alt="">
+            </div>
+            <div>
+                <h2 class="d-inline-block">快速找到好髮型</h2>
+                <div>
+                    <img src="images/btn_app_android.png" alt="">
+                    <img src="images/btn_app_ios.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="raise">
+        <div class="d-flex text-center">
+            <div>
+                已有
+                <div class="big_number">635</div>
+                位設計師
+            </div>
+            <div>
+                    發表
+                    <div class="big_number">635</div>
+                    張髮型作品
+                </div>
+        </div>
+        
+    </div>
+</body>
+</html>

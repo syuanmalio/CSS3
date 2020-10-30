@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text overflow</title>
+    <style>
+        body{
+            background: #ccc;
+        }
+        .card {
+            background: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 240px;
+            float: left;
+        }
+        .card h3 {
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+        }
+        .card p {
+            -webkit-line-clamp:4;
+            overflow:hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        .card2 {
+            background: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 240px;
+            float: left;
+            /* word-break: break-all; */
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" title="陳時中「健保要漲」說完走人！專家全看傻…醫重砲開轟">
+        <h3>陳時中「健保要漲」說完走人！專家全看傻…醫重砲開轟</h3>
+        <p>近來頻傳健保費將調漲，衛福部長陳時中日前出席「2020健保國是會議」時，說完調漲保費就拍拍屁股走人，引來醫界砲火猛烈，不滿一場論壇只剩醫師與專家們互相討論，政府代表卻走光光，怒斥「健保開會模式讓人刷新三觀」。</p>
+    </div>
+    <div class="card" title="傻眼！川普出院重返白宮 第一件事先脫口罩">
+        <h3>傻眼！川普出院重返白宮 第一件事先脫口罩</h3>
+        <p>根據美國《 CNN 》報導，川普確診新冠肺炎後，於 2 日傍晚入住馬里蘭州的華特里德國家軍事醫療中心（ Walter Reed National Military Medical Center ）；在住院僅 3 天後，川普已於美東時間 5 日傍晚 6點半（台灣時間 6 日清晨 6 點半）左右出院。</p>
+    </div>
+    <div class="card2">
+        Pneumonoultramicroscopicsilicovolcanoconiosis
+        Trump is about to leave hospital, saying "don't be afraid of the new crown" White House epidemic is still doubtful
+        US President Trump’s doctor Sean Conley said that Trump’s condition continues to improve and he can be discharged from the hospital.
+
+        At a press conference held in the afternoon of Monday (October 5) U.S. time, Conley also said that Trump "may not be completely out of risk" but can safely return to the White House.
+
+        Trump's medical team also said that in the past 72 hours, Trump had no respiratory discomfort, no fever, and normal blood oxygen.
+
+        Just before the doctor released the news, Trump took the lead in tweeting: "I will be discharged from the hospital at 6:30 pm (22:30 GMT)."
+    </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid2</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-areas: " header header header header"
+                                    "nav nav nav nav"
+                                    "aside main main main "
+                                    "footer footer footer footer";
+        }
+        .d-flex{
+            display: flex;
+        }
+        .cover-fit{
+            width: 100%;
+            object-fit: cover;
+        }
+        header{
+            grid-area:header;
+            height: 20vh;
+            background: url(images/dog1.jpeg) center 250px;
+            background-size: cover;
+        }
+        nav{
+            background: lightgreen;
+            grid-area: nav;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav li{
+            list-style: none;
+
+        }
+        nav a{
+            display: block;
+            background: brown;
+            padding: 10px;
+        }
+        main{
+            background: lightblue;
+            grid-area: main;
+            padding: 0 25px;
+        }
+        main img{
+            padding: 5px 0;
+        }
+        aside{
+            background: lemonchiffon;
+            grid-area: aside;
+            padding: 10px;
+        }
+        aside img{
+            width: 110%;
+        }
+        footer{
+            background: lightsalmon;
+            grid-area: footer;
+            padding: 10px;
+        }
+        footer figure{
+            float: left top;
+            width: 100px;
+            height: 100px;
+        }
+        @media screen and (max-width: 768px){
+           .wrapper{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-areas: "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header></header>
+
+        <nav >
+            <ul class="d-flex">
+                <li><a>Home</a></li>
+                <li><a>Product</a></li>
+                <li><a>Story</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>舊金山自由行景點有哪些？Top 10舊金山景點必去</h1>
+            <figure>
+                <img class="cover-fit" src="images/1.jpg" alt="">
+                <img class="cover-fit" src="images/2.jpg" alt="">
+                <figcaption>波比推薦Top 10舊金山必去景點如下，第一次去舊金山記得優先進攻，附上舊金山景點地圖方便大家安排行程。</figcaption>
+            </figure>
+            <ul>
+                <li>金門大橋 (Golden Gate Bridge)</li>
+                <li>九曲花街 (Lombard Street)</li>
+                <li>惡魔島 (Alcatraz Island)</li>
+                <li>聯合廣場 (Union Square)</li>
+                <li>39碼頭 (Pier 39)</li>
+                <li>彩繪女士 (Painted Ladies)</li>
+                <li>金門公園 (Golden Gate Park)</li>
+                <li>藝術宮 (Palace of Fine Arts)</li>
+                <li>海灣大橋＆渡輪大廈 (San Francisco-Oakland Bay Bridge & Ferry Building)</li>
+                <li>卡斯楚街</li>
+            </ul>
+        </main>
+
+        <aside>
+            <figure>
+                <img src="images/3.jpg" alt="">
+                <img src="images/4.jpg" alt="">
+                <img src="images/5.jpg" alt="">
+                <img src="images/6.jpg" alt="">
+                <img src="images/7.jpg" alt="">
+                <img src="images/8.jpg" alt="">
+                <img src="images/9.jpg" alt="">
+                <img src="images/10.jpg" alt="">
+                <img src="images/11.jpg" alt="">
+                <img src="images/12.jpg" alt="">
+                <img src="images/13.jpg" alt="">
+            </figure>
+        </aside>
+
+        <footer>
+            <figure>
+                <img class="cover-fit" src="images/25.png" alt="">
+            </figure>
+            
+                <p>Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

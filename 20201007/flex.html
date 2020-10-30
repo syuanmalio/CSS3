@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .wrapper{
+            max-width: 800px;
+            height: 500px;
+            background: #ddd;
+            margin:0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* align-items: stretch; */
+            flex-wrap: wrap;
+            /* 自動換行 */
+            flex-flow: row wrap;
+            /* 合併flex-direction與flex-wrap */
+            align-content: space-between;
+            /* 一定要有flex-wrap 才能設定 align-content */
+        }
+        .box{
+            /* flex-basis: 50px; */
+            /* 複寫寬度，不管之前width設定多少 */
+            width: 100px;
+            height: 100px;
+            background:peru ;
+            margin: 10px;
+            color: white;
+            font-size: 25px;
+            /* flex-shrink: 1; */
+            flex: 0 1 100px;
+            /* 合併寫法 flex-grow flex-shrink flex-basis */
+        }
+        .box1{
+            /* flex-grow: 1; */
+            /* 會將剩餘空間分配給指定標籤 */
+            /* flex-shrink: 3; */
+            /* 與flex-grow相同，有相對的影響，數字越大壓縮越大，若全部都設3，看起來會跟1一樣 */
+            order: 2;
+            align-self: center;
+        }
+        .box2{
+            /* flex-grow: 2; */
+            /* 將剩餘空間除3後，1/3給box1，2/3給box2， */
+            /* 所以box1的顯示空間，為原本設定的空間+1/3剩餘空間 */
+            /* 而box2的顯示空間，為原本設定的空間+2/3剩餘空間 */
+            order: -1;
+            align-self: flex-start;
+        }
+        .box3{
+            order: 1;
+        }
+        .box4{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">1
+            <div>1</div> <!--會跟隨容器高度變化-->
+        </div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <!-- <div class="box ">5</div>
+        <div class="box ">6</div> -->
+        <!-- <div class="box ">7</div> -->
+        <!-- <div class="box ">8</div>
+        <div class="box ">9</div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>LLLLLLibrary</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --primary-color: rgba(190, 191, 170, 1);
+            --primary-color-hover:rgba(165, 3, 3, 1);
+            --secondary-color:rgba(74, 96, 140, 1);
+            --secondary-color-hover:rgba(114, 2, 2, 1);
+            --other-color:rgba(191, 144, 3, 1);
+          }
+
+        body{
+          font-family: 'Dancing Script', cursive;
+        }
+        .bg-primary{
+          background:var(--primary-color)!important
+        }
+        .btn-primary{
+            background: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            color: white;
+        }
+        .btn-primary:hover{
+            background: var(--secondary-color-hover);
+            border: 1px solid var(--secondary-color-hover);
+        }
+        li a:hover{
+          color: var(--secondary-color-hover)!important;
+        }
+        .banner{
+            height: 20rem;
+            width: 100%;
+            background: url(images/pexels-ivo-rainha-1290141.jpg) center 80%;
+            background-size: cover;
+            overflow: hidden;
+            
+        }
+        .banner h1{
+          font-size: 6rem;
+          line-height: 20rem;
+          color:white;
+          text-shadow:2px 2px 2px rgba(114, 2, 2, 1),6px 6px 6px white,4px 4px 4px rgba(191, 144, 3, 1);
+          margin: 0;
+          
+        }
+        .imgBox{
+          height: 20rem;
+          width: 20rem;
+          object-position: center center;
+        }
+        .line{
+          height: 0.5rem;
+          background: var(--primary-color);
+          border-radius: 50%;
+        }
+        footer span{
+          color: var(--primary-color-hover);
+        }
+        footer .logo{
+          color: rgb(0,0,9);
+          font-size: 2rem;
+        }
+        .fig{
+          width: 10rem;
+          height: 10rem;
+        }
+        .bgddd{
+          /* background: cornflowerblue; */
+        }
+        .tover{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+  <body>
+      <header class="p-0 bg-primary" >
+            <nav class="navbar navbar-expand-lg navbar-light container   ">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <a class="navbar-brand h6 my-2" href="#">
+                  <img src="images/ROC_National_Palace_Museum_Seal.svg.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                  LLLLLLibrary
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">News Zone</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Exhibits</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Visiting</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Transportation</a>
+                      </li>
+                      <li class="nav-item active hovernone">
+                        <a class="nav-link " href="#">Library</a>
+                      </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Library </a>
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li> -->
+
+
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success btn-primary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+            </nav>
+
+            <div class="banner text-center">
+              <h1>Library Feature</h1>
+            </div>
+      </header>
+
+      <div class=" p-0 bg-primary"> <!-- BreadCrumb -->
+        <nav  aria-label="breadcrumb m-0 p-0 ">
+            <ol class="breadcrumb mb-5 container bg-primary">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+      </div>
+
+      <article class="container ">
+          <div class="row">
+              <div class="col-lg-4  d-flex flex-column align-items-center text-justify text-center mb-5">
+                  <figure class="figure">
+                      <img src="images/concept-1229907_1280.jpg" class="fig figure-img img-fluid rounded rounded-circle" alt="...">
+                  </figure>
+                  <h3 class="tover">Pictorial Songs of the Brush: A Guide to Paintings in the National Palace Museum Collection</h3>
+                  <p class="mb-2">Dates: 2020-07-10~2020-09-23</p>
+                  <p class="mb-4">Gallery: (Northern Branch) Exhibition Area I 210</p>
+                  <button class="btn btn-outline-success btn-primary my-2 my-sm-0" type="submit">view more >>></button>
+              </div>
+              
+              <div class="col-lg-4  d-flex flex-column align-items-center text-justify text-center mb-5">
+                <figure class="figure">
+                    <img src="images/book-1935973_1280.jpg" class="fig figure-img img-fluid rounded rounded-circle" alt="...">
+                </figure>
+                <h3 class="tover">The Khubilghan: The Incarnated Lamas of the Qing Dynasty and Related Artifacts</h3>
+                <p class="mb-2">Dates: 2020-11-28~2021-03-01</p>
+                <p class="mb-4">Gallery: (Northern Branch) Exhibition Area I 103,105</p>
+                <button class="btn btn-outline-success btn-primary my-2 my-sm-0" type="submit">view more >>></button>
+              </div>
+
+              <div class="col-lg-4  d-flex flex-column align-items-center text-justify text-center mb-5">
+                  <figure class="figure">
+                      <img src="images/silence-3810106_1280.jpg" class="fig figure-img img-fluid rounded rounded-circle" alt="...">
+                  </figure>
+                  <h3 class="tover">Appraisal of the Past: The Imperial Bronze Collection during the Qianlong Reign</h3>
+                  <p class="mb-2">Dates: 2020-12-01~2021-12-31</p>
+                  <p class="mb-4">Gallery: (Northern Branch) Exhibition Area I 304</p>
+                  <button class="btn btn-outline-success btn-primary my-2 my-sm-0" type="submit">view more >>></button>
+              </div>
+          </div>
+      </article>
+
+      <div class="container line mb-5"></div> <!-- just line -->
+
+      <main>
+
+          <article class="container mb-5 "> <!-- 1 --> 
+              <div class="row">
+                  <div class=" d-flex flex-row-reverse align-items-center flex-wrap justify-content-center">
+                      <div class="d-flex flex-column col-lg-8">
+                        <h2>1. Rare Books</h2>
+                        <p class="text-justify mb-0">The core of the National Palace Museum's collection of treasured rare books was inherited from the old manuscripts, annotated editions of masters, movable print editions, and woodblock print editions through the ages from the former Qing, also including a small number of ancient imprints and old manuscripts originally from Korea and Japan. Among the more important objects, one can count the Complete Library of the Four Treasuries of the Wen-yüan Pavilion, the Abstracted Contents of the Four Treasuries of the Ch'ih-tsao Hall, block-printed editions of the T'ien-lu-lin-lang and the Wu-ying Palace, gazetteers, repositories of the Grand Secretariat, Ch'en Chung-t'ao's collection in the Yen-i Tower in Shan-ying, and Yang Shou-ching's book collection from his Kuan-hai Hall. This assembly of books is not only enormous in number, it also includes several extremely rare sole surviving editions. The collection further includes books from the Peking Library entrusted to the management of the Museum. Besides the rich collection of books through the ages, many books submitted in the early Qing and texts dealing with dramas provide an ideal source of material for researching book editions, Ming and Qing dynasty history, and folk literature.</p>
+                      </div>
+                      <img src="images/1.jpg" class="rounded d-block imgBox mt-4 col-lg-4 col-md-12 col-sm-12 col-12" alt="...">
+                  </div>
+              </div>
+          </article>
+
+          <div class="container line mb-5"></div> <!-- just line -->
+
+          <article class="container mb-5"> <!-- 2 -->
+            <div class="row">
+                <div class="col-lg d-flex  align-items-center flex-wrap justify-content-center">
+                    <div class="d-flex flex-column col-lg-8">
+                      <h2>2. Qing Archives and Documents</h2>
+                      <p class="text-justify mb-0">The various archives and memorials composing the Qing dynasty documents in the National Palace Museum collection number more than 400,000 volumes. They include historical archives compiled by the Historiography Institute, compilations of documents, and documents from the inner court of the former Qing dynasty. They not only provide later generations with a rare glimpse at the Qing dynasty archival system, they are an invaluable treasure of primary material for researching Qing dynasty history. In terms of sources for the Museum collection, they can be divided into the four main types: 1) imperial vermilion-rescripted memorials from the palace archives, archives of the Grand Secretariat repositories, archives of the Council of State (including copies of memorials and assorted archives), and Historiography Institute archives (including various historical materials compiled by the Historiography Institute of the Qing dynasty and the Qing Historiography Institute of the early Republican government). Furthermore, recent years have witnessed a substantial number of private donations (such as the documents of Tseng from Hsiang-hsiang and archives of Qing dynasty foreign relations).</p>
+                    </div>
+                    <img src="images/2.jpg" class="rounded d-block imgBox mt-4 col-lg-4 col-md-12 col-sm-12 col-12 " alt="...">
+                </div>
+            </div>
+          </article>
+
+          <div class="container line mb-5"></div> <!-- just line -->
+
+          <article class="container mb-5"> <!-- 3 -->
+            <div class="row">
+                <div class="col-lg d-flex flex-row-reverse align-items-center">
+                    <div class="d-flex flex-column">
+                      <h2>3. Books and Periodicals</h2>
+                      <p class="text-justify mb-0 ">To accommodate the general public and academic research in Chinese art and culture, as well supporting the wide-ranging needs of Museum staff in their tasks of arranging, researching, and presenting exhibitions, the National Palace Museum has since moving to its present location in Taipei actively sought and assembled modern and contemporary books and periodicals in Chinese and other languages on Chinese art, culture, conservation, and museum studies. Using open stacks, they are provided for the general reading public for reference. This vast collection of books and periodicals is both academic and professional in nature and social education in function.</p>
+                    </div>
+                    <!-- <img src="images/3.jpg" class="rounded mx-4  d-block imgBox  " alt="..."> -->
+                </div>
+            </div>
+          </article>
+
+      </main>
+
+      <footer class="bg-primary">
+               <div class="container pb-3 pt-4">
+          <a class="navbar-brand h6 mb-2  logo" href="#">
+            <img src="images/ROC_National_Palace_Museum_Seal.svg.png" width="50" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+            LLLLLLibrary
+          </a>
+          <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb bg-primary mb-0 p-0">
+              <li class="breadcrumb-item"><a href="#">Government Website Open Information Announcement</a></li>
+              <li class="breadcrumb-item"><a href="#">Privacy Policy</a></li>
+              <li class="breadcrumb-item"><a href="#">Security Policy</a></li>
+            </ol>
+          </nav>
+          <a>Add | No. 502, Section 2, Ren'ai Road, Linkou District, New Taipei City 111001, Taiwan (R.O.C.) (Digital Education Institute Library)</a>
+          <p class="mb-0"><span>Tel|</span> +886-2-6631-6666#1968 <span>Fax |</span> 886-2-6631-6666 <span>Service E-mail |</span> Library@npm.gogo.tw</p>
+          <p class="mb-0">Copyright ©2020 III Digital Education Institute All Rights Reserved.</p>
+        </div>
+      </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

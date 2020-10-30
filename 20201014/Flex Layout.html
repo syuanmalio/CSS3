@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #eee;
+        }
+        a, a:link{
+            color: #3b5998;
+            text-decoration: none;
+        }
+        .wrapper{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .cover-fit{
+            width: 100%;
+            object-fit: cover;
+        }
+        .main-header{
+            background: #gray;
+        }
+        .main-header .d-flex{
+            justify-content: space-between;
+        }
+        .logo{
+            height: 48px;
+        }
+        .main-nav{
+            background: #3b5998;
+        }
+        .main-nav ul{
+            padding: 0;
+            list-style: none;
+        }
+        .main-nav ul li{
+            position: relative;
+        }
+        .main-nav ul li a{
+            color: #ffffff;
+            padding:  10px 20px;
+            display: block;
+        }
+        .main-nav ul li a:hover, .main-nav li.active a{
+            background:#8b9dc3 ;
+        }
+        .submenu{
+            position: absolute;
+            background: #3b5998;
+            /* display: none; */
+            opacity: 0;
+            transition: 0.5s;
+            /* height: 0; */
+            max-height: 0;
+            width: 100%;
+        }
+        .main-nav li:hover .submenu{
+            /* display: block; */
+            opacity: 1;
+            /* height: 115px; */
+            max-height: 125px;
+        }
+        @media screen and (max-width:768px){
+            .main-nav li{
+                flex-grow: 1;
+                flex-basis: 0px;
+                text-align: center;
+            }
+        }
+            
+        main.d-flex{
+            margin-top: 20px;
+            max-width: 100vw;
+
+            /* justify-content: space-between;
+            flex-basis: 0; */
+        }
+        .left-aside figure{
+            background: #ffffff;
+            width: 160px;
+            height: 160px;
+            margin: 0 0 10px 0 ;
+            border: 3px double #ccc;
+            overflow: hidden;
+        }
+        .side-nav{
+            list-style: none;
+            padding: 0;
+            /* margin: 0; */
+        }
+        .side-nav li a{
+            display: block;
+            padding: 10px 20px;
+            border-left: 2px solid transparent ;
+        }
+        .side-nav li a:hover, .side-nav li.active a{
+            background: #fff;
+            border-left: 2px solid #3b5998 ;
+        }
+        .main-article{
+            
+            flex-grow: 1;
+            width: 100px;
+            margin: 0 10px;
+            flex-shrink: 0;
+            min-height: calc(100vh - 148px);
+            /* align-items: flex-end; */ 
+        }
+        .main-article h1{
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+        .main-article p{
+            line-height: 1.7;
+        }
+        .banner{
+            height: 160px;
+            background-image: url(images/slide1.jpeg);
+            background-position: center center ;
+            background-size: cover;
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 768px){
+            main.d-flex{
+                flex-direction: column;
+            }
+            .left-aside figure{
+                margin: 0 auto 10px;
+            }
+            .right-aside img{
+                display: none;
+            }
+            .banner{
+                background-image: url(images/slide2.jpeg) ;
+            }
+            .main-article{
+                width: calc(100vw - 30px);
+                min-height: calc(100vh - 380px);
+            }
+            .side-nav{
+                display: flex;
+            }
+            .side-nav li{
+                flex: 1 0 0;
+                text-align: center;
+            }
+            .side-nav li a{
+                display: block;
+                padding: 10px 20px;
+                border-top: 2px solid transparent ;
+                border-left: none;
+            }
+            .side-nav li a:hover, .side-nav li.active a{
+                background: #fff;
+                border-top: 2px solid #3b5998 ;
+                border-left: none;
+            }
+            
+        }
+        .card{
+            background: #fff;
+            border: 3px double #ccc;
+            padding: 15px;
+        }
+        
+        .right-aside{
+            background: red;
+            width: 160px;
+            padding: 0;
+            /* object-fit: scale-down; */
+            /* align-items: flex-end; */
+            /* flex-shrink: 0; */
+        }
+        footer{
+            background: #3b5998;
+            text-align: center;
+            /* position: absolute; */
+            padding: 0;
+            
+            /* height: 0px; */
+        }
+        footer p{
+            padding: 7px 0 ;
+            margin:  10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="wrapper  d-flex">
+            <img class="logo" src="images/facebook.png" alt="">
+            <div>
+                <a href="">Log In</a> | <a href="">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="wrapper d-flex">
+            <li class="active"><a href="">Home</a></li>
+            <li>
+                <a href="">Product</a>
+                <ul class="submenu">
+                    <li><a>Men</a></li>
+                    <li><a>Women</a></li>
+                    <li><a>Children</a></li>
+                </ul>
+            </li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <main class="d-flex">
+            <aside class="left-aside">
+                <figure>
+                    <img class="cover-fit" src="images/clothes_v3.png" alt="">
+                </figure>
+                <ul class=side-nav>
+                    <li class="active"><a href="">首頁</a></li>
+                    <li><a href="">關於</a></li>
+                    <li><a href="">相簿</a></li>
+                    <li><a href="">影片</a></li>
+                </ul>
+            </aside>
+            <article class="main-article">
+                <div class="card">
+                    <div class="banner"></div>
+                    <h1>Uniform Map</h1>
+                    <time>2020/10/04</time>
+                    <p>CSS不能單獨使用，必須與HTML或XML一起協同工作，為HTML或XML起裝飾作用。本文主要介紹用於裝飾HTML網頁的CSS技術。其中HTML負責確定網頁中有哪些內容，CSS確定以何種外觀(大小、粗細、顏色、對齊和位置)展現這些元素。CSS可以用於設定頁面布局、設定頁面元素樣式、設定適用於所有網頁的全域樣式。CSS可以零散地直接添加在要應用樣式的網頁元素上，也可以集中化內建於網頁、連結式引入網頁以及匯入式引入網頁。</p>
+                    <p>CSS最重要的目標是將檔案的內容與它的顯示分隔開來。在CSS出現前，幾乎所有的HTML檔案內都包含檔案顯示的資訊，比如字型的顏色、背景應該是怎樣的、如何排列、邊緣、連線等等都必須一一在HTML檔案內列出，有時重複列出。CSS使作者可以將這些資訊中的大部分隔離出來，簡化HTML檔案，這些資訊被放在一個輔助的，用CSS語言寫的檔案中。HTML檔案中只包含結構和內容的資訊，CSS檔案中只包含樣式的資訊。</p>
+                </div>
+            </article>
+            <aside class="right-aside">
+                    <img class="cover-fit" src="images/jk.png" alt="">
+            </aside>
+        </main>
+    </div>
+
+    <footer >
+        <p>Facebook Icn</p>
+    </footer>
+
+</body>
+</html>

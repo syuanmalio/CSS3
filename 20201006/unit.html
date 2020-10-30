@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit</title>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+        }
+        html {
+            /* font-size:16px; */
+            /* 可以使用調整基本文字大小來控制em與rem */
+        }
+        div {
+            /* font-size:2em; */
+            /* 使用em  會有加乘效果 (如果套在一起) */
+            /* font-size:2rem; */
+        }
+        .full-page {
+            /* 1vh(vw)為 1/100 viewport 的高度(寬度) */
+            background:chartreuse;
+            height: 100vh;
+            width: 50vw;
+        }
+        .v-ex {
+            width: 30vmin;
+            height: 30vmax;
+            background: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class=full-page>
+        content
+        <div>
+            div content
+            <div>
+                div 2 content
+                <div>
+                    div 3 content
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="v-ex"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .box{
+            height:200px;
+            width:200px;
+            background-color:blueviolet;
+            margin:10px;
+            float:left;
+            /* border-radius:20px;*/
+            /* border-radius:10% */
+        }
+        /* .box2 {
+            height:200px;
+            width:200px;
+            background:blueviolet;
+            margin:10px;
+            border-radius:10px 20px 30px 40px;
+        } */
+        .radius1 {border-radius:20px;}
+        .radius2 {border-radius:10px 20px 30px 40px;}
+        .radius3 {border-radius:20px 50px 100px;}
+        .radius4 {border-radius:20px 50px;}
+        .radius5 {border-radius:0px 100%;}
+        .radius6 {border-radius:0 0 100% 100%;}
+        .radius7 {border-radius:0 0 0 100%;} /*四分之一圓*/
+        .radius8 {border-radius:50%;} /*圓形*/
+        .radius9 {border-radius:20px/50px;} 
+    </style>
+</head>
+<body>
+    <div class="box radius1"></div>
+    <div class="box radius2"></div>
+    <div class="box radius3"></div>
+    <div class="box radius4"></div>
+    <div class="box radius5"></div>
+    <div class="box radius6"></div>
+    <div class="box radius7"></div>
+    <div class="box radius8"></div>
+    <div class="box radius9"></div>
+</body>
+</html>

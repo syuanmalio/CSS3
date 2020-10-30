@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7e</title>
+    <style>
+        @keyframes scle {
+            from{
+                background-position: left top;
+            }
+            to {
+                background-position: -500px top
+            }
+        }
+        body{
+            background: url(images/space-bg.jpg);
+        }
+        .earth{
+            width: 281px;
+            height: 281px;
+            margin: 0 auto;
+            background: url(images/earth2.jpg) left top;
+            border-radius: 50%;
+            box-shadow: 0 0 25px  rgb(92, 134, 250),
+                        0 0 40px lightblue,
+                        -10px 30px 70px #000 inset;
+            animation: scle 5s infinite linear ;
+        }
+    </style>
+</head>
+    <div class="earth"></div>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat walk</title>
+    <style>
+        @keyframes walk {
+            from {
+                background-position: left top;
+            }
+            to {
+                background-position: -3150px top;
+            }
+        }
+        .cat1{
+            width: 350px;
+            height: 380px;
+            margin: 0 auto;
+            background: url(images/cat.png) left top;
+            animation: walk .8s infinite steps(9);            
+        }
+        .cat2{
+            width: 350px;
+            height: 380px;
+            margin: 0 auto;
+            background: url(images/normal.png) left top;
+            animation: walk .8s infinite steps(9);            
+        }
+        .cat3{
+            width: 350px;
+            height: 380px;
+            margin: 0 auto;
+            background: url(images/message.png) left top;
+            animation: walk .8s infinite steps(9);            
+        }
+    </style>
+</head>
+<body>
+    <div class="cat1"></div>
+    <div class="cat2"></div>
+    <div class="cat3"></div>
+    
+</body>
+</html>

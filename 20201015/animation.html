@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        @keyframes change {
+            from{
+                background: rgb(247, 37, 247);
+            }
+            to{
+                background: rgb(35, 48, 230);
+            }
+        }
+        @keyframes change2 {
+            0%{
+                background: rgb(255, 0, 0);
+            }
+            25%{
+                background: rgb(255, 247, 0);
+                /* transform: scale(0); */
+                width: 150px;
+                /* height: 100px; */
+            }
+            50%{
+                background: rgb(25, 0, 255);
+                /* transform: scale(100); */
+                width: 200px;
+                /* height: 300px; */
+            }
+            100%{
+                background: rgb(212, 0, 255);
+                /* transform: scale(0); */
+                width: 250px;
+            }
+            
+        }
+        .box{
+            /* width: 100vw; */
+            /* height: 100vh; */
+            width: 200px;
+            height: 100px;
+            /* margin: 0 auto; */
+            background: rgb(81, 167, 32);
+            animation-name: change2;
+            animation-duration: 2s;
+            /* 單動畫的變化時間 */
+            animation-iteration-count:infinite;
+            /* 播放次數 */
+            animation-direction: alternate;
+            /* 播放的方向 */
+            animation-fill-mode: both;
+            /* 最後停留時的狀態 */
+            animation-delay: 1s;
+            /* 播放延遲時間 */
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+        .linear{
+            animation-timing-function: linear
+        }
+        .ease-in{
+            animation-timing-function: ease-in
+        }
+        .cubic{
+            animation-timing-function: cubic-bezier(.81,.08,.28,1.42)
+        }
+        .step-start{
+            animation-timing-function:step-start
+        }
+        .step-end{
+            animation-timing-function:step-end
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box linear"></div>
+    <div class="box ease-in"></div>
+    <div class="box cubic"></div>
+    <div class="box step-start"></div>
+    <div class="box step-end"></div>
+</body>
+</html>

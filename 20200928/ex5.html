@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {background:rgb(226, 226, 226)}
+        .transition{
+            transition: .5s;
+        }
+        .card{
+            background: #ffffff;
+            width: 300px;
+            margin:auto;
+            /* padding:50px; */
+            border-radius: 15px;
+            text-align:center;
+            box-shadow: 5px 5px 5px #646464;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Sansita Swashed', cursive;
+            /* transition: 1s; */
+        }
+        .banner {
+            height: 150px;
+            background: url("images/light.jpg") center center;
+            background-size:cover
+        }
+        .card figure{
+            width: 150px;
+            height: 150px;
+            overflow:hidden;
+            border-radius: 50%;
+            /* margin: -60px auto 0;  */
+            margin-left: -75px;
+            position: absolute;
+            top: 65px;
+            left: 50%;
+        }
+        .card figure:hover .icon{
+            opacity:1;
+        }
+        .card figure:hover .ava{
+
+        }
+        .cover-fit{
+            width:100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .icon {
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index:1;
+        }
+        .ava
+        .card h1 {
+            border-bottom: 5px double rgb(184, 184, 184);
+            /* padding:10px;   */
+        }
+        .card h3 {
+            color:gray;
+            margin-top:-10px
+        }
+        .card:hover h1{
+            letter-spacing: 3px;
+            text-indent: 3px;
+        }
+        .card-content {
+            padding: 50px 20px 20px 20px;
+            border:20px solid transparent;
+            border-image:url(images/border-image2.png) 20 round;
+        }
+        .btm {
+            display:block;
+            /* width: 100%; */
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+            background: #f3e2c7; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=0 ); /* IE6-9 */
+
+            font-family: Arial, Helvetica, sans-serif;
+            /* color:white; */
+            padding: 10px 0px;
+            /* margin-bottom:10px; */
+            border-radius: 10px; 
+            cursor: pointer;
+        }
+        .btm-dow {
+            display:block;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px 0px;
+            border-radius: 10px; 
+            cursor: pointer;
+            background: #c19e67;
+
+        }
+        .card a {
+            font-family: 'Sansita Swashed', cursive;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card transition">
+        <div class="banner"></div>
+        <figure>
+            <img class="icon transition" src="images/picture.svg" alt="">
+            <img class="cover-fit  ava transition" src="images/dr_strange.jpg" alt="">  
+        </figure>
+        <div class="card-content">
+            <h1 class="transition">Dr. Strange</h1>
+            <h3 >Hellow, I'm steve strange</h3>
+            <div>
+                <a class="btm btm-up" role="button">follow me</a>
+                <a class="btm-dow" role="button">follow me</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

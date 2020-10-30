@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        @keyframes changeColor {
+            0%{
+                background: rgb(255, 0, 0);
+            }
+            25%{
+                background: rgb(255, 247, 0);
+            }
+            50%{
+                background: rgb(25, 0, 255);
+            }
+            100%{
+                background: rgb(212, 0, 255);
+            }
+        }
+        @keyframes     {
+            0%{
+                width: 100px;
+            }
+            100%{
+                width: 300px;
+            }
+        }
+        .box{
+            /* width: 100vw; */
+            /* height: 100vh; */
+            width: 200px;
+            height: 100px;
+            /* margin: 0 auto; */
+            background: rgb(81, 167, 32);
+            animation: changeColor 2s infinite alternate both, changeWidth infinite alternate both;
+        }
+        .box:hover{
+            animation-play-state: paused;
+        }
+        /* .linear{
+            animation-timing-function: linear
+        }
+        .ease-in{
+            animation-timing-function: ease-in
+        }
+        .cubic{
+            animation-timing-function: cubic-bezier(.81,.08,.28,1.42)
+        }
+        .step-start{
+            animation-timing-function:step-start
+        }
+        .step-end{
+            animation-timing-function:step-end
+        } */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

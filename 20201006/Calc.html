@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            margin: 0 auto;
+            max-width: 800px;
+            min-height: calc(100vh - 38px);
+        }
+        .box {
+            background: lightgreen;
+            height: 200px;
+            width: calc(25% - 20px);
+            float: left;
+            margin: 10px;
+            padding: 10px;
+        }
+        .clear {
+            clear: both;
+        }
+        .bar {
+            background: cornflowerblue;
+            height: 200vh;
+        }
+        .footer {
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-align:center;
+            position: ;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>    
+        <div class="box">3</div>    
+        <div class="box">4</div>       
+        <div class="clear"></div>
+        <div class="bar"></div>    
+    </div>
+     <div class="footer">
+        this is footer.
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {background:rgb(226, 226, 226)}
+        .card{
+            background: #ffffff;
+            width: 300px;
+            margin:auto;
+            /* padding:50px; */
+            border-radius: 15px;
+            text-align:center;
+            box-shadow: 5px 5px 5px #646464;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner {
+            height: 200px;
+            background: url("images/light.jpg") center center;
+            background-size:cover
+        }
+        .card figure{
+            width: 150px;
+            height: 150px;
+            overflow:hidden;
+            border-radius: 50%;
+            /* margin: -60px auto 0;  */
+            margin-left: -75px;
+            position: absolute;
+            top: 120px;
+            left: 50%;
+        }
+        .card figure img{
+            width:100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .card h1 {
+            border-bottom: 3px double rgb(184, 184, 184);
+            padding:10px;
+            font-family: 'Sansita Swashed', cursive;
+        }
+        .card h3 {
+            color:gray;
+            font-family: 'Sansita Swashed', cursive;
+        }
+        .card-content {
+            padding: 30px 20px 0px 20px;
+            border:20px solid transparent;
+            border-image:url(images/border-image2.png) 20 round;
+        }
+        .btm {
+            display:block;
+            /* width: 100%; */
+            background: repeating-radial-gradient(
+                circle at center bottom,pink,red,pink 16%); 
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            padding: 5px 0px;
+            /* margin:10px; */
+            border-radius: 10px; 
+            cursor: pointer;
+        }
+        .btm:hover {
+            background: pink;
+        }
+        .card a {
+            font-family: 'Sansita Swashed', cursive;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="banner"></div>
+        <figure>
+            <img src="images/dr_strange.jpg" alt="">
+        </figure>
+        <div class="card-content">
+            <h1>Dr. Strange</h1>
+            <h3>Hellow, I'm steve strange</h3>
+            
+            <a class="btm" role="button">follow me</a>
+            
+        </div>
+    </div>
+</body>
+</html>

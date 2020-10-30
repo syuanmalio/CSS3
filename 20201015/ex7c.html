@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7c</title>
+    <style>
+        /* *{
+            box-sizing: border-box;
+            margin: 0;
+        } */
+        @keyframes sunRotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        @keyframes earthRotate{
+            0%{
+                transform: rotate(0) translatex(250px);
+            }
+            100%{
+                transform: rotate(720deg) translatex(250px);
+            }
+        }
+        @keyframes moonRotate{
+            0%{
+                transform: rotate(0deg) translatex(20px);
+            }
+            100%{
+                transform: rotate(360deg) translatex(20px);
+            }
+        }
+        body{
+            background-image: url(images/space-bg.jpg);
+        }
+        .box{
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+            border: 1px solid #fff;
+            position: relative;
+        }
+        .orbit{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .sun{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -64px;
+            animation: sunRotate 30s infinite linear;
+            
+        }
+        .earth{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -36px;
+            animation: earthRotate 15s infinite linear;
+            background: cadetblue;
+        }
+        /* .moon{
+            position: absolute;
+            animation: moonRotate 5s infinite linear;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="orbit"></div>
+        <img class="sun" src="images/sun.png" alt="">
+        <!-- <div class="earth"> -->
+        <img class="earth "src="images/earth.png" alt="">
+        <img src="images/moon.png" alt="">
+        <!-- </div> -->
+        
+    </div>
+</body>
+</html>

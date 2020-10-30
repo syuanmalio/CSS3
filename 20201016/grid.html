@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .wrapper{
+            max-width: 960px;
+            height: 600px;
+            background: lightgoldenrodyellow;
+            margin: 0 auto;
+            display: grid;
+            /* grid-template-columns: 160px auto 1fr 2fr;
+            grid-template-rows: 100px auto 1fr 1fr; */
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+            /* grid-gap: 10px 20px; */
+            /* grid-template-columns: repeat(3, 1fr) 160px; */
+            grid-template-columns: repeat(3, auto) 160px;
+            /* justify-content: space-between; */
+            /* align-content: space-between; */
+        }
+        .grid-item{
+            padding: 10px;
+            border: 1px solid rgb(63, 106, 224);
+            background: rgb(178, 236, 255);
+        }
+        .grid-item09{
+            align-self: end;
+            justify-self: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grid-item">01</div>
+        <div class="grid-item">02</div>
+        <div class="grid-item">03</div>
+        <div class="grid-item">04</div>
+        <div class="grid-item">05</div>
+        <div class="grid-item">06</div>
+        <div class="grid-item">07</div>
+        <div class="grid-item">08</div>
+        <div class="grid-item grid-item09">09</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+        <div class="grid-item">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
+        <div class="grid-item">16</div>
+    </div>
+</body>
+</html>

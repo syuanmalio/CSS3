@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Origin</title>
+    <style>
+        .box{
+            width: 240px;
+            height: 220px;
+            border: 10px dashed #333333;
+            padding:20px;
+            margin: 20px;
+            background: url("images/check.jpg") no-repeat ;
+        }
+        .border-box
+        {
+            background-origin:border-box
+        }
+        .padding-box
+        {
+            background-origin:padding-box
+        }
+        .content-box
+        {
+            background-origin:content-box
+        }
+    </style>
+</head>
+<body>
+    <div class="box border-box"></div>
+    <div class="box padding-box"></div>
+    <div class="box content-box"></div>
+</body>
+</html>
